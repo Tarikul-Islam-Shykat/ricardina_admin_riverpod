@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           title: 'Pretty Rini',
           theme: ThemeData(primarySwatch: Colors.blue),
           home: const SplashScreen(), // Your login screen
-          // ... other MaterialApp properties
+          // ... other MaterialAp properties
         );
       },
     );

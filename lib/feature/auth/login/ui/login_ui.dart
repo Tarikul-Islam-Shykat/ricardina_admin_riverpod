@@ -8,6 +8,7 @@ import 'package:ricardina_admin_riverpod/core/global/custom_booton_widget.dart';
 import 'package:ricardina_admin_riverpod/core/global/custom_text.dart';
 import 'package:ricardina_admin_riverpod/core/global/loading_screen.dart';
 import 'package:ricardina_admin_riverpod/core/global/text_field_widget.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/forget_password/ui/forget_password_ui.dart';
 import 'package:ricardina_admin_riverpod/feature/auth/login/provider/login_state_provider.dart';
 import '../../../../core/const/app_colors.dart';
 import '../../../../core/const/image_path.dart';
@@ -92,7 +93,13 @@ class LoginScreen extends ConsumerWidget {
                 alignment: Alignment.centerRight,
                 child: InkWell(
                   //  onTap: () => Navigator.pushNamed(context, AppRoute.forgetScreen),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(
+                        builder: (context) => ForgetPasswordScreen(),
+                      ),
+                    );
+                  },
                   child: Text(
                     "Forgot Password",
                     style: GoogleFonts.poppins(
