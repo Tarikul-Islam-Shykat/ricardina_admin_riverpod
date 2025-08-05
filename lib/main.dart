@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ricardina_admin_riverpod/feature/auth/auth/screen/splash_screen.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/splash_screen/screen/splash_screen.dart';
 import 'package:ricardina_admin_riverpod/feature/auth/login/ui/login_ui.dart';
 // ... other imports
 
