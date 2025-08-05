@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ricardina_admin_riverpod/feature/login/ui/login_ui.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/auth/screen/splash_screen.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/login/ui/login_ui.dart';
 // ... other imports
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Pretty Rini',
           theme: ThemeData(primarySwatch: Colors.blue),
-          home: const LoginScreen(), // Your login screen
+          home: const SplashScreen(), // Your login screen
           // ... other MaterialApp properties
         );
       },

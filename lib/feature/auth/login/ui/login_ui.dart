@@ -4,14 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:ricardina_admin_riverpod/core/global/custom_booton_widget.dart';
 import 'package:ricardina_admin_riverpod/core/global/custom_text.dart';
 import 'package:ricardina_admin_riverpod/core/global/loading_screen.dart';
 import 'package:ricardina_admin_riverpod/core/global/text_field_widget.dart';
-import 'package:ricardina_admin_riverpod/feature/login/provider/login_state_provider.dart';
-import '../../../core/const/app_colors.dart';
-import '../../../core/const/image_path.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/login/provider/login_state_provider.dart';
+import '../../../../core/const/app_colors.dart';
+import '../../../../core/const/image_path.dart';
 
 class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});

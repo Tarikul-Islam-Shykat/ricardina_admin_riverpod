@@ -5,8 +5,8 @@ import 'dart:convert';
 import 'package:ricardina_admin_riverpod/core/local/local_data.dart';
 import 'package:ricardina_admin_riverpod/core/network_caller/endpoints.dart';
 import 'package:ricardina_admin_riverpod/core/network_caller/network_config.dart';
-import 'package:ricardina_admin_riverpod/feature/login/model/login_request_model.dart';
-import 'package:ricardina_admin_riverpod/feature/login/model/login_state_model.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/login/model/login_request_model.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/login/model/login_state_model.dart';
 
 class LoginRepository {
   final NetworkConfig _networkConfig = NetworkConfig();
@@ -16,7 +16,6 @@ class LoginRepository {
     if (email.isEmpty || password.isEmpty) {
       return const LoginState(error: 'Please fill all fields');
     }
-
     try {
       final request = LoginRequest(email: email, password: password);
       final response = await _networkConfig.ApiRequestHandler(
@@ -43,14 +42,5 @@ class LoginRepository {
     } catch (e) {
       return LoginState(error: "Failed to login: $e");
     }
-  }
-
-  Future<bool> isAuthenticated() async {
-    final token = await _localService.getToken();
-    return token != null && token.isNotEmpty;
-  }
-
-  Future<void> logout() async {
-    await _localService.clearUserData();
   }
 }

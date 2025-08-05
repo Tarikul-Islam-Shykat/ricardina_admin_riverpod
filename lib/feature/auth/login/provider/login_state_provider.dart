@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:ricardina_admin_riverpod/feature/login/model/login_state_model.dart';
-import 'package:ricardina_admin_riverpod/feature/login/repo/login_repo.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/login/model/login_state_model.dart';
+import 'package:ricardina_admin_riverpod/feature/auth/login/repo/login_repo.dart';
 
 // Repository provider
 final loginRepositoryProvider = Provider<LoginRepository>((ref) {
@@ -33,15 +33,6 @@ class LoginNotifier extends StateNotifier<LoginState> {
   void setUpValues() {
     emailController.text = "super.admin@gmail.com";
     passwordController.text = "12345678";
-  }
-
-  void clearError() {
-    state = state.copyWith(error: null);
-  }
-
-  Future<void> logout() async {
-    await _repository.logout();
-    state = const LoginState();
   }
 
   @override
