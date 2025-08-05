@@ -72,8 +72,8 @@ class ForgetPasswordScreen extends ConsumerWidget {
                 loading: () => btnLoading(),
                 error: (error, stackTrace) => CustomButton(
                   onTap: () => forgetPasswordNotifier.forgetPassword(),
-                  title: normalText(text: "Reset Password In"),
-                  color: AppColors.primaryColor,
+                  title: normalText(text: "Reset Password"),
+                  color: AppColors.redcolor,
                 ),
               ), // CustomButton(
             ],
