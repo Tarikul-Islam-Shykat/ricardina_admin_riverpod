@@ -29,7 +29,7 @@ class LoginScreen extends ConsumerWidget {
         // Navigator.of(context).pushReplacement(
         //   MaterialPageRoute(builder: (context) => AdminDashboard()),
         // );
-        //  AppSnackbar.show(message: "Login Successful", isSuccess: true);
+        // AppSnackbar.show(message: "Login Successful", isSuccess: true);
       }
     });
 

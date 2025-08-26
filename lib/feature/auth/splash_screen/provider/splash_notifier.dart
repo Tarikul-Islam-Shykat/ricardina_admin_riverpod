@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ricardina_admin_riverpod/feature/auth/login/ui/login_ui.dart';
 
+import '../../login_async/ui/login_async_ui.dart';
+
 class SplashNotifier extends StateNotifier<void> {
   final BuildContext context;
 
@@ -16,7 +18,7 @@ class SplashNotifier extends StateNotifier<void> {
     await Future.delayed(const Duration(seconds: 2));
     Navigator.of(
       context,
-    ).pushReplacement(MaterialPageRoute(builder: (_) => const LoginScreen()));
+    ).pushReplacement(MaterialPageRoute(builder: (_) => const LoginAsyncUi()));
   }
 }
 
