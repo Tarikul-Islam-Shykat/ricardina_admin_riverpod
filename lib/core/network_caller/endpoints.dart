@@ -3,6 +3,17 @@ class Urls {
   static const String login = '$baseUrl/auth/login';
   static const String getProfile = '$baseUrl/auth/profile';
   static const String getCategories = '$baseUrl/category';
+  static const String getTips = '$baseUrl/tips';
+  static const String getAllHospital = '$baseUrl/hospital';
+  static const String getAllPharmacy = '$baseUrl/pharmacy';
+  static const String createPharmacy = '$baseUrl/pharmacy';
+  static const String createTips = '$baseUrl/tips';
+  static const String getDashboardData = '$baseUrl/auth/admin-dashboard-count';
+  static const String getHospitalAppointment =
+      '$baseUrl/hospitalAppointment/hospital';
+
+  static const String getAllDoctor = '$baseUrl/doctor';
+  static const String createDoctor = '$baseUrl/doctor';
 
   static const String signUp = '$baseUrl/users/register';
   static const String setupProfile = '$baseUrl/users/profile';

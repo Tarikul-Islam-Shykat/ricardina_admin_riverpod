@@ -7,11 +7,9 @@ import 'package:ricardina_admin_riverpod/core/network_caller/network_config.dart
 
 class DashboardRepository {
   final NetworkConfig _networkConfig = NetworkConfig();
-  final LocalService _localService = LocalService();
 
   Future<Map<String, dynamic>> getDashboardData() async {
     try {
-      // Create request body directly without model
       final response = await _networkConfig.ApiRequestHandler(
         RequestMethod.GET,
         Urls.getDashboardData,
