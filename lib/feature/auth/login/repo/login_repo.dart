@@ -1,6 +1,7 @@
 // features/auth/login_repository.dart
 
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:ricardina_admin_riverpod/core/local/local_data.dart';
 import 'package:ricardina_admin_riverpod/core/network_caller/endpoints.dart';
@@ -24,6 +25,8 @@ class LoginRepository {
         json.encode(request.toJson()),
         is_auth: false,
       );
+
+      log(response.toString());
 
       if (response != null && response['success'] == true) {
         // Save user data

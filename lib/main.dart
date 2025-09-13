@@ -4,16 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ricardina_admin_riverpod/feature/auth/splash_screen/screen/splash_screen.dart';
-import 'package:ricardina_admin_riverpod/feature/auth/login/ui/login_ui.dart';
-// ... other imports
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-
-  runApp(
-    // Wrap your app with ProviderScope
-    const ProviderScope(child: MyApp()),
-  );
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -28,7 +22,6 @@ class MyApp extends StatelessWidget {
           title: 'Pretty Rini',
           theme: ThemeData(primarySwatch: Colors.blue),
           home: const SplashScreen(), // Your login screen
-          // ... other MaterialAp properties
         );
       },
     );

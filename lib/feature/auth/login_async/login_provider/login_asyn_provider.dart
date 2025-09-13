@@ -20,7 +20,6 @@ class LoginAsyncProvider extends AsyncNotifier<bool> {
 
   Future<bool> login() async {
     state = const AsyncValue.loading();
-
     try {
       final repository = ref.read(loginRepositoryProvider);
       if (emailController.text.isEmpty || passwordController.text.isEmpty) {
